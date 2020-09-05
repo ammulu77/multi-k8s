@@ -17,8 +17,8 @@ before_install:
     - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker build -t perikala/react-test -f ./client/Dockerfile.dev ./client
 
-scripts: 
-#    - docker run -e CI=true perikala/docker-react npm test
+scripts:
+    - docker run -e CI=true cygnetops/docker-react npm test
 
 deploy: 
     provider: script
