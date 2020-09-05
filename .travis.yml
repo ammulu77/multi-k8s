@@ -18,7 +18,7 @@ before_install:
     - docker build -t perikala/react-test -f ./client/Dockerfile.dev ./client
 
 scripts: 
-    - docker run -e CI=true stephengrider/docker-react npm test
+#    - docker run -e CI=true perikala/docker-react npm test
 
 deploy: 
     provider: script
